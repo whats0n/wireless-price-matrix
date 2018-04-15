@@ -1,0 +1,28 @@
+html,
+body,
+.main
+	height: 100%
+
+body 
+	min-width: 980px
+	font-family: 'Roboto'
+	+f(14px, 400, 1.4)
+
+.main
+	&.is-elevate
+		background: img-url('bg-elevate.jpg') no-repeat center top
+		background-size: cover
+	&.is-metro
+		background: #eaeae9
+
+.content
+	padding: 20px
+
+.container
+	position: relative
+	padding: 20px
+	margin: 0 auto
+	max-width: 980px
+	background: $white
+	border: 1px solid rgba($black, 0.2)
+	+clr

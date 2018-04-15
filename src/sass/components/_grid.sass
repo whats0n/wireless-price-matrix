@@ -1,0 +1,50 @@
+.grid
+	display: table
+	table-layout: fixed
+	width: 100%
+	&__header
+		display: table-header-group
+		.grid__col
+			position: relative
+			padding-right: 40px
+			color: $white
+			+f(18px, 700, 1.3)
+			+elevate
+				background: $elevateSecondary
+			+metro
+				background: $metroPrimary
+			&.is-up,
+			&.is-down
+				&:before
+					opacity: 1
+			&.is-up
+				&:before
+					transform: rotate(180deg)
+			&:before
+				content: ''
+				position: absolute
+				top: 50%
+				right: 20px
+				margin-top: -4px
+				border-style: solid
+				border-width: 8px 6px 0
+				border-color: transparent
+				opacity: 0
+				transition: opacity 0.25s
+				+elevate
+					border-top-color: $elevatePrimary
+				+metro
+					border-top-color: $white
+	&__body
+		display: table-row-group
+		box-shadow: inset 0 0 0 1px rgba($black, 0.1)
+		.grid__row
+			&:not(:last-child)
+				.grid__col
+					border-bottom: 1px solid rgba($black, 0.1)
+	&__row
+		display: table-row
+	&__col
+		display: table-cell
+		padding: 20px
+		+f(16px, 400, 1.3)
