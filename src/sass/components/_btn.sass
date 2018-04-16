@@ -1,0 +1,22 @@
+.btn
+	display: inline-block
+	vertical-align: top
+	padding: 15px 20px
+	color: $white
+	background: $black
+	font-family: inherit
+	+f(16px, 400, 20px)
+	text-transform: uppercase
+	transition: background 0.25s, box-shadow 0.25s
+	+elevate
+		background: $elevatePrimary
+		+hover
+			background: darken($elevatePrimary, 5%)
+	+metro
+		background: $metroSecondary
+		+hover
+			background: darken($metroSecondary, 5%)
+	&:active
+		box-shadow: inset 2px 2px 2px 1px rgba($black, 0.1)
+	&_wide
+		width: 100%

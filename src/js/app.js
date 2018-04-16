@@ -1,3 +1,3 @@
-import sayHello from './lib/sayHello.js';
-
-sayHello();
+$(document).ready(() => {
+  !('ontouchstart' in window) && $('body').addClass('no-touch');
+});

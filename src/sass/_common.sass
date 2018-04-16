@@ -9,20 +9,36 @@ body
 	+f(14px, 400, 1.4)
 
 .main
-	&.is-elevate
+	+elevate
 		background: img-url('bg-elevate.jpg') no-repeat center top
 		background-size: cover
-	&.is-metro
+	+metro
 		background: #eaeae9
 
 .content
+	overflow: auto
 	padding: 20px
+	height: calc(100% - 70px)
+	text-align: center
 
 .container
 	position: relative
+	display: inline-block
+	vertical-align: top
+	overflow: auto
 	padding: 20px
 	margin: 0 auto
-	max-width: 980px
-	background: $white
 	border: 1px solid rgba($black, 0.2)
+	max-width: 100%
+	min-width: 940px
+	max-height: calc(100% - 70px)
+	background: $white
+	font-size: 0
+	text-align: left
 	+clr
+	&__inner
+		display: inline-block
+		vertical-align: top
+		padding-right: 20px
+		margin-right: -20px
+		font-size: 14px

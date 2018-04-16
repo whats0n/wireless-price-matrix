@@ -1,0 +1,25 @@
+//scrollbar
+*
+	&::-webkit-scrollbar
+		display: initial !important
+		&:vertical
+			width: 7px
+			+elevate
+				background: linear-gradient(to right, transparent 3px, $elevateSecondary 3px, $elevateSecondary 4px, transparent 4px)
+			+metro
+				background: linear-gradient(to right, transparent 3px, $metroSecondary 3px, $metroSecondary 4px, transparent 4px)
+		&:horizontal
+			height: 7px
+			+elevate
+				background: linear-gradient(to bottom, transparent 3px, $elevateSecondary 3px, $elevateSecondary 4px, transparent 4px)
+			+metro
+				background: linear-gradient(to bottom, transparent 3px, $metroSecondary 3px, $metroSecondary 4px, transparent 4px)
+	&::-webkit-scrollbar-thumb
+		+elevate
+			background: $elevatePrimary
+			+hover
+				background: $elevatePrimary
+		+metro
+			background: $metroPrimary
+			+hover
+				background: $metroPrimary
