@@ -1,0 +1,58 @@
+.loader
+	position: fixed
+	z-index: 200
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	opacity: 0
+	visibility: hidden
+	background: rgba($white, 0.8)
+	+vertical 
+	transition: opacity 0.25s, visibility 0.25s
+	&.is-open
+		opacity: 1
+		visibility: visible
+	&__center
+		display: inline-block
+		vertical-align: middle
+	&__title
+		color: $black
+		+f(18px, 500, 1.2)
+	&__icon
+		position: relative
+		display: block
+		margin: 0 auto
+		width: 1em
+		height: 1em
+		font-size: 150px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			top: 13%
+			left: 13%
+			right: 13%
+			bottom: 13%
+			border-radius: 50%
+			width: 74%
+			height: 74%
+			background: rgba($black,0.3)
+			transform: scale(0)
+			animation: scale 2s cubic-bezier(0.1,0.2,0.3,1) infinite
+			+metro
+				background: rgba($metroSecondary, 0.3)
+			+elevate
+				background: rgba($elevatePrimary, 0.3)
+		&:after
+			animation-delay: 1s
+
+@keyframes scale
+  0%
+    opacity: 1
+    transform: scale(0)
+  90%
+    transform: scale(1)
+  100%
+    opacity: 0
+    transform: scale(1)
