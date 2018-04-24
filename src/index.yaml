@@ -3,5 +3,8 @@ ProjectTitle: wireless-price-matrix
 PageList:
 - file: metro.html
 - file: elevate.html
+- file: error-metro.html
+- file: error-elevate.html
+- file: error.html
 - file: loader-metro.html
 - file: loader-elevate.html
